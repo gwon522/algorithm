@@ -1,9 +1,6 @@
 package beakjoon.class2.normal;
 
 import java.io.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.StringTokenizer;
 
 public class RefillChessboard {
     public static void main(String[] args) throws IOException {
@@ -25,7 +22,7 @@ public class RefillChessboard {
         for (int i = 0; i <= m-8; i++) {
             for (int j = 0; j <= n-8; j++) {
                 int curAnswer = getSolution(i,j,inputBoard);
-                answer = answer > curAnswer?curAnswer : answer;
+                answer = Math.min(answer, curAnswer);
             }
         }
     }
